@@ -2,8 +2,12 @@
 <html lang="en">
 
 <script>
+
+let playerSelection = (/scissor|rock|paper/i);
+
+const gameChoices = ['Rock', 'Paper', 'Scissor'];
 function computerPlay () {
-    const gameChoices = ['Rock', 'Papers', 'Scissors'];
+    
     const gameRandom = Math.floor(Math.random()* gameChoices.length);
     console.log(gameRandom, gameChoices[gameRandom]);
 }
