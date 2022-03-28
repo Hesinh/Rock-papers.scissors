@@ -2,7 +2,11 @@
 <html lang="en">
 
 <script>
-
+function computerPlay () {
+    const gameChoices = ['Rock', 'Papers', 'Scissors'];
+    const gameRandom = Math.floor(Math.random()* gameChoices.length);
+    console.log(gameRandom, gameChoices[gameRandom]);
+}
 
 </script>
 
