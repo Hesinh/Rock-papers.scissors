@@ -2,15 +2,9 @@
 <html lang="en">
 
 <script>
-
-let playerSelection = (/scissor|rock|paper/i);
-
-const gameChoices = ['Rock', 'Paper', 'Scissor'];
-function computerPlay () {
-    
-    const gameRandom = Math.floor(Math.random()* gameChoices.length);
-    console.log(gameRandom, gameChoices[gameRandom]);
-}
+let computerSelector =['rock', 'paper' ,'scissor'];
+let cpuSelect = computerSelector[Math.floor(Math.random()* computerSelector.length)];
+let playerSelection = prompt("input rock, paper, scissor ¡Try your luck!");
 
 </script>
 
