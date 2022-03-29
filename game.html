@@ -2,26 +2,26 @@
 <html lang="en">
 
 <script>
-let computerSelector =['rock', 'paper' ,'scissor'];
+let computerSelector =['ROCK', 'PAPER' ,'SCISSOR'];
 let cpuSelect = computerSelector[Math.floor(Math.random()* computerSelector.length)];
 let playerSelection = prompt("input rock, paper, scissor ¡Try your luck!");
 game();
 function game() {
     playerSelection.toLowerCase;
     //computerPlay();
-    if (playerSelection == cpuSelect){
+    if (playerSelection.toUpperCase() == cpuSelect){
         console.log("You draw the game")
-    }else if(cpuSelect=='scissor' && playerSelection.toUpperCase()=='ROCK'){
+    }else if(cpuSelect=='SCISSOR' && playerSelection.toUpperCase()=='ROCK'){
         console.log("You Win, awesome right?")
-    }else if(cpuSelect =='paper'&&playerSelection.toUpperCase()=='ROCK'){
+    }else if(cpuSelect =='PAPER'&&playerSelection.toUpperCase()=='ROCK'){
         console.log("You lose, nothing more to say")
-    }else if(cpuSelect=='rock'&&playerSelection=='paper'){
+    }else if(cpuSelect=='ROCK'&&playerSelection.toUpperCase()=='PAPER'){
         console.log("You Win, awesome right?")
-    }else if(cpuSelect=='scissor'&&playerSelection=='paper'){
+    }else if(cpuSelect=='SCISSOR'&&playerSelection.toUpperCase()=='PAPER'){
         console.log("You lose, nothing more to say")
-    }else if(cpuSelect=='paper'&&playerSelection=='scissor'){
+    }else if(cpuSelect=='PAPER'&&playerSelection.toUpperCase()=='SCISSOR'){
         console.log("You Win, awesome right?")
-    }else if(cpuSelect=='rock'&&playerSelection=='scissor'){
+    }else if(cpuSelect=='ROCK'&&playerSelection.toUpperCase()=='SCISSOR'){
         console.log("You lose, nothing more to say")
     }else {
         console.log("i didn't want to offend you")
