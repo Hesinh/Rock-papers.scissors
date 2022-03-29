@@ -6,6 +6,28 @@ let computerSelector =['rock', 'paper' ,'scissor'];
 let cpuSelect = computerSelector[Math.floor(Math.random()* computerSelector.length)];
 let playerSelection = prompt("input rock, paper, scissor ¡Try your luck!");
 
+function game() {
+    playerSelection.toLowerCase;
+    //computerPlay();
+    if (playerSelection == cpuSelect){
+        console.log("You draw the game")
+    }else if(cpuSelect=='scissor' && playerSelection.toUpperCase()=='ROCK'){
+        console.log("You Win, awesome right?")
+    }else if(cpuSelect =='paper'&&playerSelection.toUpperCase()=='ROCK'){
+        console.log("You lose, nothing more to say")
+    }else if(cpuSelect=='rock'&&playerSelection=='paper'){
+        console.log("You Win, awesome right?")
+    }else if(cpuSelect=='scissor'&&playerSelection=='paper'){
+        console.log("You lose, nothing more to say")
+    }else if(cpuSelect=='paper'&&playerSelection=='scissor'){
+        console.log("You Win, awesome right?")
+    }else if(cpuSelect=='rock'&&playerSelection=='scissor'){
+        console.log("You lose, nothing more to say")
+    }else {
+        console.log("i didn't want to offend you")
+    }
+}
+
 </script>
 
 
