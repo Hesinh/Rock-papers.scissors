@@ -5,6 +5,8 @@
 let computerSelector =['ROCK', 'PAPER' ,'SCISSOR'];
 let cpuSelect = computerSelector[Math.floor(Math.random()* computerSelector.length)];
 let playerSelection = prompt("input rock, paper, scissor ¡Try your luck!");
+console.log("your input was"+" "+playerSelection);
+console.log("the computer select"+" "+cpuSelect.toLowerCase());
 game();
 function game() {
     playerSelection.toLowerCase;
