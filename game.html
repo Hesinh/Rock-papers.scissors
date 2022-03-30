@@ -9,6 +9,7 @@ let cpuSelect = 1;
 let playerSelection =1;
 //This is what make the game start´s, it make uses of function and local variables
 function gameOn() {
+    alert("The game runs everything inside the console.log , except the user input, have fun¡");
     for (let i = 0; i<5 ; i++){
         cpuSelect = computerSelector[Math.floor(Math.random()* computerSelector.length)];
         playerSelection = prompt("input rock, paper, scissor ¡Try your luck!");
