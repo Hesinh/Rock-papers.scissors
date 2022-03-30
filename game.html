@@ -9,12 +9,14 @@ let cpuSelect = computerSelector[Math.floor(Math.random()* computerSelector.leng
 let playerSelection = prompt("input rock, paper, scissor ¡Try your luck!");
 game();
 gamepoint();
+// This controls the point score of the game
 function gamepoint(){
     console.log("your input was"+" "+playerSelection);
     console.log("the computer select"+" "+cpuSelect.toLowerCase());    
     console.log("PlayerScore ="+" "+playerPoint);
     console.log("CpuScore ="+" "+cpuPoint);
     }
+// This has the code for every situation of the game
 function game() {
     playerSelection.toLowerCase;
     //computerPlay();
@@ -42,7 +44,10 @@ function game() {
         console.log("i didn't want to offend you")
     }
 }
+//This make the game start´s
+function gameOn() {
 
+}
 
 </script>
 
