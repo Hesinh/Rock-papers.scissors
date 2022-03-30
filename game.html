@@ -5,14 +5,24 @@
 playerPoint= 0 ;
 cpuPoint= 0;
 let computerSelector =['ROCK', 'PAPER' ,'SCISSOR'];
-
+let cpuSelect = 1;
+let playerSelection =1;
+//This is what make the game start´s, it make uses of function and local variables
 function gameOn() {
     for (let i = 0; i<5 ; i++){
-         cpuSelect = computerSelector[Math.floor(Math.random()* computerSelector.length)];
-         playerSelection = prompt("input rock, paper, scissor ¡Try your luck!");
+        cpuSelect = computerSelector[Math.floor(Math.random()* computerSelector.length)];
+        playerSelection = prompt("input rock, paper, scissor ¡Try your luck!");
         game();
-        gamepoint();
+        (playerSelection===null)? i=5 : gamepoint() ;  
     }
+    if (playerPoint == cpuPoint){
+        console.log("Draw, nobody wins");
+    }else if(playerPoint > cpuPoint){
+        console.log("You win, against the cpu, congratulations");
+    }else if(playerPoint < cpuPoint){
+        console.log("You loss, but you can play again")
+    }
+    
 }
 
 // This controls the point score of the game
@@ -25,7 +35,10 @@ function gamepoint(){
 // This has the code for every situation of the game
 function game() {
     //computerPlay();
-    if (playerSelection.toUpperCase() == cpuSelect){
+    if(playerSelection===null){
+        alert("You cancel?Then finish the game")
+        return;
+    }else if (playerSelection.toUpperCase() == cpuSelect){
         console.log("You draw the game")
     }else if(cpuSelect=='SCISSOR' && playerSelection.toUpperCase()=='ROCK'){
         console.log("You Win, awesome right?");
