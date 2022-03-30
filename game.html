@@ -5,10 +5,21 @@
 playerPoint= 0 ;
 cpuPoint= 0;
 let computerSelector =['ROCK', 'PAPER' ,'SCISSOR'];
-let cpuSelect = computerSelector[Math.floor(Math.random()* computerSelector.length)];
-let playerSelection = prompt("input rock, paper, scissor ¡Try your luck!");
-game();
-gamepoint();
+//for (let i = 0; i<5 ; i++){
+cpuSelect = computerSelector[Math.floor(Math.random()* computerSelector.length)];
+playerSelection = prompt("input rock, paper, scissor ¡Try your luck!");
+//console.log(cpuSelect)
+//console.log(playerSelection)
+//}
+function gameOn() {
+    for (let i = 0; i<5 ; i++){
+         cpuSelect = computerSelector[Math.floor(Math.random()* computerSelector.length)];
+         playerSelection = prompt("input rock, paper, scissor ¡Try your luck!");
+        game();
+        gamepoint();
+    }
+}
+
 // This controls the point score of the game
 function gamepoint(){
     console.log("your input was"+" "+playerSelection);
@@ -18,7 +29,6 @@ function gamepoint(){
     }
 // This has the code for every situation of the game
 function game() {
-    playerSelection.toLowerCase;
     //computerPlay();
     if (playerSelection.toUpperCase() == cpuSelect){
         console.log("You draw the game")
@@ -44,11 +54,6 @@ function game() {
         console.log("i didn't want to offend you")
     }
 }
-//This make the game start´s
-function gameOn() {
-
-}
-
 </script>
 
 
