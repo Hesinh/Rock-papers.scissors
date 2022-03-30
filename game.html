@@ -34,29 +34,28 @@ function gamepoint(){
     }
 // This has the code for every situation of the game
 function game() {
-    //computerPlay();
     if(playerSelection===null){
         alert("You cancel?Then finish the game")
         return;
     }else if (playerSelection.toUpperCase() == cpuSelect){
-        console.log("You draw the game")
+        console.log("Both select the same")
     }else if(cpuSelect=='SCISSOR' && playerSelection.toUpperCase()=='ROCK'){
-        console.log("You Win, awesome right?");
+        console.log("You rock smash the scissor of the cpu, you win this round");
         playerPoint++;
     }else if(cpuSelect =='PAPER'&&playerSelection.toUpperCase()=='ROCK'){
-        console.log("You lose, nothing more to say");
+        console.log("The cpu paper enroll you rock, you loss this round");
         cpuPoint++;
     }else if(cpuSelect=='ROCK'&&playerSelection.toUpperCase()=='PAPER'){
-        console.log("You Win, awesome right?");
+        console.log("Your paper enroll the cpu rock, you win this round");
         playerPoint++;
     }else if(cpuSelect=='SCISSOR'&&playerSelection.toUpperCase()=='PAPER'){
-        console.log("You lose, nothing more to say");
+        console.log("The scissor of the cpu cuts your paper, you loss this round");
         cpuPoint++;
     }else if(cpuSelect=='PAPER'&&playerSelection.toUpperCase()=='SCISSOR'){
-        console.log("You Win, awesome right?");
+        console.log("Your scissor cuts the paper of the cpu, you win this round");
         playerPoint++;
     }else if(cpuSelect=='ROCK'&&playerSelection.toUpperCase()=='SCISSOR'){
-        console.log("You lose, nothing more to say");
+        console.log("The rock of the cpu smash your scissor, you loss this round");
         cpuPoint++;
     }else {
         console.log("i didn't want to offend you")
