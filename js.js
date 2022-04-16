@@ -1,11 +1,19 @@
+let playerPoint= 0 ;
+let cpuPoint= 0;
+let computerSelector =['ROCK', 'PAPER' ,'SCISSOR'];
+let cpuSelect = 1;
+let playerSelection =1;
+
 // this is a practice to see how add events to the page
+const activeSwitch = document.getElementById('')
+
 const rock = document.querySelector('#rock');
-rock.addEventListener('click', () => {
-    alert("your choice is rock")
-});
+rock.addEventListener('click', gameOn , playerSelection = "ROCK");
+
 const scissor = document.querySelector('#scissor');
 scissor.addEventListener('click', () =>{
     alert("your choice is scissor")
+   
 });
 const paper = document.querySelector('#paper');
 paper.addEventListener('click', () =>{
@@ -13,20 +21,15 @@ paper.addEventListener('click', () =>{
 });
 
 
-playerPoint= 0 ;
-cpuPoint= 0;
-let computerSelector =['ROCK', 'PAPER' ,'SCISSOR'];
-let cpuSelect = 1;
-let playerSelection =1;
+
 //This is what make the game start´s, it make uses of function and local variables
 function gameOn() {
-    alert("The game runs everything inside the console.log , except the user input, have fun¡");
-    for (let i = 0; i<5 ; i++){
+    //alert("The game runs everything inside the console.log , except the user input, have fun¡");
+    //for (let i = 0; i<5 ; i++){
         cpuSelect = computerSelector[Math.floor(Math.random()* computerSelector.length)];
-        playerSelection = prompt("input rock, paper, scissor ¡Try your luck!");
+    //    playerSelection = prompt("input rock, paper, scissor ¡Try your luck!");
         game();
-        (playerSelection===null)? i=5 : gamepoint() ;  
-    }
+        gamepoint();
     if (playerPoint == cpuPoint){
         console.log("Draw, nobody wins");
     }else if(playerPoint > cpuPoint){
@@ -34,15 +37,16 @@ function gameOn() {
     }else if(playerPoint < cpuPoint){
         console.log("You loss, but you can play again")
     }
-    
 }
 
 // This controls the point score of the game
 function gamepoint(){
+    const divPlayerPoint = document.querySelector('#playerPoint') ;
+    divPlayerPoint.textContent = "PlayerScore ="+" "+playerPoint ;
+    const divCpuPoint = document.querySelector('#cpuPoint');
+    divCpuPoint.textContent = "CpuScore ="+" "+cpuPoint ;
     console.log("your input was"+" "+playerSelection);
     console.log("the computer select"+" "+cpuSelect.toLowerCase());    
-    console.log("PlayerScore ="+" "+playerPoint);
-    console.log("CpuScore ="+" "+cpuPoint);
     }
 // This has the code for every situation of the game
 function game() {
