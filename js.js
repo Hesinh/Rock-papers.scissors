@@ -5,8 +5,6 @@ let cpuSelect = 1;
 let playerSelection =1;
 
 // this is a practice to see how add events to the page
-const activeSwitch = document.getElementById('')
-
 let rock = document.querySelector('#rock');
 rock.addEventListener('click', function() { playerSelection = "rock" , gameOn() });
 
@@ -27,11 +25,14 @@ function gameOn() {
         game();
         gamepoint();
     if (playerPoint == cpuPoint){
-        console.log("Draw, nobody wins");
+        const equalPoint = document.querySelector("#LOG2");
+        equalPoint.textContent = "STAYS equals";
     }else if(playerPoint > cpuPoint){
-        console.log("You win, against the cpu, congratulations");
+        const plyMore = document.querySelector("#LOG2");
+        plyMore.textContent = "YOU are winning, HOLD IT";
     }else if(playerPoint < cpuPoint){
-        console.log("You loss, but you can play again")
+        const cpuMore = document.querySelector("#LOG2");
+        cpuMore.textContent = "YOU are lossing, STAND UP"
     }
 }
 
