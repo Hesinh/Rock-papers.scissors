@@ -1,3 +1,18 @@
+// this is a practice to see how add events to the page
+const rock = document.querySelector('#rock');
+rock.addEventListener('click', () => {
+    alert("your choice is rock")
+});
+const scissor = document.querySelector('#scissor');
+scissor.addEventListener('click', () =>{
+    alert("your choice is scissor")
+});
+const paper = document.querySelector('#paper');
+paper.addEventListener('click', () =>{
+    alert("your choice is paper")
+});
+
+
 playerPoint= 0 ;
 cpuPoint= 0;
 let computerSelector =['ROCK', 'PAPER' ,'SCISSOR'];

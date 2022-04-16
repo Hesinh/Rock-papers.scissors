@@ -1,4 +1,6 @@
 body {
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
     margin: 0;
 }
@@ -11,21 +13,17 @@ header {
     font-family: sans-serif;
 }
 img{
-    width: 10em;
-    height: 8em;
+    width: 18em;
+    height: 12em;
 }
-#btn{
+button{
     object-fit: cover;
 }
 #container{
     display: flex;
     justify-content: space-evenly;
     background-color: rgb(10, 201, 20);
-    padding: 14em;
-}
-#space{
-    display: flex;
-    flex-direction: column;
+    padding: 184px;
 }
 footer {
     display: flex;
