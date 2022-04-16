@@ -7,18 +7,14 @@ let playerSelection =1;
 // this is a practice to see how add events to the page
 const activeSwitch = document.getElementById('')
 
-const rock = document.querySelector('#rock');
-rock.addEventListener('click', gameOn , playerSelection = "ROCK");
+let rock = document.querySelector('#rock');
+rock.addEventListener('click', function() { playerSelection = "rock" , gameOn() });
 
-const scissor = document.querySelector('#scissor');
-scissor.addEventListener('click', () =>{
-    alert("your choice is scissor")
-   
-});
-const paper = document.querySelector('#paper');
-paper.addEventListener('click', () =>{
-    alert("your choice is paper")
-});
+let scissor = document.querySelector('#scissor');
+scissor.addEventListener('click', function() { playerSelection = "scissor" , gameOn() });
+
+let paper = document.querySelector('#paper');
+paper.addEventListener('click', function() { playerSelection = "paper" , gameOn() });
 
 
 
@@ -45,8 +41,10 @@ function gamepoint(){
     divPlayerPoint.textContent = "PlayerScore ="+" "+playerPoint ;
     const divCpuPoint = document.querySelector('#cpuPoint');
     divCpuPoint.textContent = "CpuScore ="+" "+cpuPoint ;
-    console.log("your input was"+" "+playerSelection);
-    console.log("the computer select"+" "+cpuSelect.toLowerCase());    
+    const divPlayerSelection = document.querySelector('#playerSelection');
+    divPlayerSelection.textContent = "Your input was"+" "+playerSelection.toLowerCase() ;
+    const divCpuSelection = document.querySelector('#cpuSelection');
+    divCpuSelection.textContent = "The computer select"+" "+cpuSelect.toLowerCase();
     }
 // This has the code for every situation of the game
 function game() {
