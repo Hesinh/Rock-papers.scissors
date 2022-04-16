@@ -49,30 +49,31 @@ function gamepoint(){
     }
 // This has the code for every situation of the game
 function game() {
+    const Log = document.querySelector("#LOG");
     if(playerSelection===null){
         alert("You cancel?Then finish the game")
         return;
     }else if (playerSelection.toUpperCase() == cpuSelect){
-        console.log("Both select the same")
+        Log.textContent= "Both select the same" ;
     }else if(cpuSelect=='SCISSOR' && playerSelection.toUpperCase()=='ROCK'){
-        console.log("You rock smash the scissor of the cpu, you win this round");
+        Log.textContent="You rock smash the scissor of the cpu, you win this round";
         playerPoint++;
     }else if(cpuSelect =='PAPER'&&playerSelection.toUpperCase()=='ROCK'){
-        console.log("The cpu paper enroll you rock, you loss this round");
+        Log.textContent = "The cpu paper enroll you rock, you loss this round";
         cpuPoint++;
     }else if(cpuSelect=='ROCK'&&playerSelection.toUpperCase()=='PAPER'){
-        console.log("Your paper enroll the cpu rock, you win this round");
+        Log.textContent = "Your paper enroll the cpu rock, you win this round";
         playerPoint++;
     }else if(cpuSelect=='SCISSOR'&&playerSelection.toUpperCase()=='PAPER'){
-        console.log("The scissor of the cpu cuts your paper, you loss this round");
+        Log.textContent = "The scissor of the cpu cuts your paper, you loss this round";
         cpuPoint++;
     }else if(cpuSelect=='PAPER'&&playerSelection.toUpperCase()=='SCISSOR'){
-        console.log("Your scissor cuts the paper of the cpu, you win this round");
+        Log.textContent = "Your scissor cuts the paper of the cpu, you win this round";
         playerPoint++;
     }else if(cpuSelect=='ROCK'&&playerSelection.toUpperCase()=='SCISSOR'){
-        console.log("The rock of the cpu smash your scissor, you loss this round");
+        Log.textContent = "The rock of the cpu smash your scissor, you loss this round";
         cpuPoint++;
     }else {
-        console.log("i didn't want to offend you")
+        Log.textContent = "i didn't want to offend you";
     }
 }
