@@ -24,15 +24,21 @@ function gameOn() {
     //    playerSelection = prompt("input rock, paper, scissor ¡Try your luck!");
         game();
         gamepoint();
+    const selectLog2 = document.querySelector("#LOG2");
     if (playerPoint == cpuPoint){
-        const equalPoint = document.querySelector("#LOG2");
-        equalPoint.textContent = "STAYS equals";
+        selectLog2.textContent = "STAYS equals";
+    }else if (playerPoint == 5) {
+        selectLog2.textContent = "YOU WIN , congratulations , Play again";
+        playerPoint = 0 ;
+        cpuPoint = 0 ;
+    }else if (cpuPoint == 5){
+        selectLog2.textContent = "YOU LOSE, Play again";
+        playerPoint = 0 ;
+        cpuPoint = 0 ;
     }else if(playerPoint > cpuPoint){
-        const plyMore = document.querySelector("#LOG2");
-        plyMore.textContent = "YOU are winning, HOLD IT";
+        selectLog2.textContent = "YOU are winning, HOLD IT";
     }else if(playerPoint < cpuPoint){
-        const cpuMore = document.querySelector("#LOG2");
-        cpuMore.textContent = "YOU are lossing, STAND UP"
+        selectLog2.textContent = "YOU are lossing, STAND UP";
     }
 }
 
@@ -43,7 +49,7 @@ function gamepoint(){
     const divCpuPoint = document.querySelector('#cpuPoint');
     divCpuPoint.textContent = "CpuScore ="+" "+cpuPoint ;
     const divPlayerSelection = document.querySelector('#playerSelection');
-    divPlayerSelection.textContent = "Your input was"+" "+playerSelection.toLowerCase() ;
+    divPlayerSelection.textContent = "Your select was"+" "+playerSelection.toLowerCase() ;
     const divCpuSelection = document.querySelector('#cpuSelection');
     divCpuSelection.textContent = "The computer select"+" "+cpuSelect.toLowerCase();
     }

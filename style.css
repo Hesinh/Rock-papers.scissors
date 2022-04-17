@@ -20,17 +20,17 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #ff00b8;
+    color: #ffe200;
     font-size: xx-large;
     border-style: solid;
 }
 #playerPoint {
-    color: blue;
+    color: #b4b4ec;
     font-family: sans-serif;
     font-size: larger;
 }
 #cpuPoint {
-    color: blueviolet;
+    color: #ebb0b1;
     font-family: sans-serif;
     font-size: larger;
 }
@@ -46,7 +46,7 @@ header {
     font-size: xx-large;
     font-family: sans-serif;
     background-color: black;   
-    color: red;
+    color: #1bdfff;
     border-style: solid;
 }
 img{
