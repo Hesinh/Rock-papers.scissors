@@ -14,14 +14,9 @@ scissor.addEventListener('click', function() { playerSelection = "scissor" , gam
 let paper = document.querySelector('#paper');
 paper.addEventListener('click', function() { playerSelection = "paper" , gameOn() });
 
-
-
 //This is what make the game start´s, it make uses of function and local variables
 function gameOn() {
-    //alert("The game runs everything inside the console.log , except the user input, have fun¡");
-    //for (let i = 0; i<5 ; i++){
         cpuSelect = computerSelector[Math.floor(Math.random()* computerSelector.length)];
-    //    playerSelection = prompt("input rock, paper, scissor ¡Try your luck!");
         game();
         gamepoint();
     const selectLog2 = document.querySelector("#LOG2");
