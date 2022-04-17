@@ -3,14 +3,51 @@ body {
     flex-direction: column;
     min-height: 100vh;
     margin: 0;
+    background-color: #1f2937;
 }
 header {
-    background-color: aqua;
+
 }
 .title{
     text-align: center;
-    font-size: larger;
+    font-size: xx-large;
     font-family: sans-serif;
+    color: #ffb300;
+    background-color: black;
+    border-style: solid;
+}
+#scorePoint {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ff00b8;
+    font-size: xx-large;
+    border-style: solid;
+}
+#playerPoint {
+    color: blue;
+    font-family: sans-serif;
+    font-size: larger;
+}
+#cpuPoint {
+    color: blueviolet;
+    font-family: sans-serif;
+    font-size: larger;
+}
+#choose {
+    font-size: xx-large;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #ffb300;
+    background-color: black;
+    border-style: solid;
+}
+#box {
+    text-align: center;
+    font-size: xx-large;
+    font-family: sans-serif;
+    background-color: black;   
+    color: red;
+    border-style: solid;
 }
 img{
     width: 18em;
@@ -22,8 +59,7 @@ button{
 #container{
     display: flex;
     justify-content: space-evenly;
-    background-color: rgb(20 103 212);
-    padding: 184px;
+    border-style: solid;
 }
 footer {
     display: flex;
